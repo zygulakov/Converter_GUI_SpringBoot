@@ -1,0 +1,2 @@
+create database valute
+hibernate will create table by itself

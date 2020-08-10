@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" type="text/css" href="css/design.css"/>
+</head>
+<body>
+<div align="center">
+    <h1>Converter</h1>
+    <select name="fromDenominator" id="fromDenominator">
+        <option th:each="valute : ${data}" th:value="${valute.getCharCode()}"
+                th:text="${valute.getCharCode()}+'('+${valute.getName()}+')'"></option>
+    </select>
+    <select name="toDenominator" id="toDenominator">
+        <option th:each="valute : ${data}" th:value="${valute.getCharCode()}"
+                th:text="${valute.getCharCode()}+'('+${valute.getName()}+')'"></option>
+    </select>
+    <br>
+    <br>
+    <input type="number" name="amount" id="amount" required min="1">
+    <input type="text" name="result" id="result" value="result">
+    <br>
+    <button id="btn">Convert</button>
+</div>
+</div>
+<script src="js/main.js"></script>
+</div>
+</body>
+</html>
